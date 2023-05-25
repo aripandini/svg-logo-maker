@@ -1,4 +1,4 @@
-const generateMarkdown = require("./lib/shapes");
+const generateSVG = require("./lib/shapes");
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
 
@@ -11,7 +11,7 @@ const questions = () => {
         },
         {
           type: 'input',
-          name: 'textcolor',
+          name: 'textColor',
           message: 'Enter a text color:',
         },
         {
@@ -26,7 +26,7 @@ const questions = () => {
         },
         {
           type: 'input',
-          name: 'shapecolor',
+          name: 'shapeColor',
           message: 'Enter a shape color:',
         }
       ]);
@@ -34,7 +34,7 @@ const questions = () => {
 
 function init() {
     questions()
-    .then((answers) => writeFile('./examples/logo.svg', shapes(answers)))
+    .then((answers) => writeFile('./examples/logo.svg', generateSVG(answers)))
     .then(() => console.log('Generated logo.svg'))
     .catch((err) => console.error(err))
 };
