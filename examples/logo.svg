@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-    <rect x='10' y='10' widht='30' height='30' fill='red' />
-    <text x='100' y='100' text-anchor='middle' alignment-baseline='middle' fill='blue'>abc</text>
+<svg version='1.1' xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+    <g>
+    <polygon points='150 1, 250 150, 50 150' fill='pink' />
+    <text x='50%' y='50%' font-size='50px' dominant-baseline='middle' text-anchor='middle' fill='purple'>AFP</text>
+    </g>
   </svg>
