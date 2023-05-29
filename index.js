@@ -7,7 +7,17 @@ const questions = () => {
         {
           type: 'input',
           name: 'text',
-          message: 'Enter text for the logo. Must not be more than 3 characters.',
+          message: 'Enter text for the logo. Must not be longer than 3 characters.',
+          filter: (answers) => {
+            return answers.toUpperCase()
+        } ,
+          validate: (answers) => {
+            if (answers.length > 3){
+              return 'Text must not be longer than 3 characters.'
+            } else {
+              return true;
+            }
+          }
         },
         {
           type: 'input',
