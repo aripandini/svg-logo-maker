@@ -1,4 +1,4 @@
-const generateSVG = require('./lib/shapes');
+const { generateSVG } = require('./lib/shapes');
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
 
